@@ -1,38 +1,37 @@
 Below are all the sequential steps required to run the project with appropriate data. All these steps need to be repeated for data of each optimization level.
 
+Step 1: Run **BIN_to_GDL.py** as per instructions in commit message
 
 
-Step 4: Run **move_GDLs_less_than_4_instructions_to_folder.py** with below command to filter out GDLs with less than 4 instructions as they do not contain much useful information. Do this for both x86 and ARM GDLs.
+Step 2: Run **format_x86.py** as per instructions in commit message
 
-    python3 move_GDLs_less_than_4_instructions_to_folder.py --input_path INPUT_FOLDER_WITH_PREPROCESSED_GDLs --output_path FOLDER_WITH_TRANSFERRED_GDLs_CONTAINING_LESS_THAN_4_INSTRUCTIONS
+Step 3: Run **format_ARM.py** as per instructions in commit message
 
-Step 5: Run **Duplicate_FIle_Detection.py** with below command to filter out duplicate GDLs. Do this for both x86 and ARM GDLs.
+Step 4: Run **move_GDLs_less_than_4_instructions_to_folder.py** as per instructions in commit message
 
-    python3 Duplicate_FIle_Detection.py --input_path INPUT_FOLDER_WITH_PREPROCESSED_GDLs --output_path FOLDER_WITH_TRANSFERRED_DUPLICATE_GDLs
+Step 5: Run **Duplicate_FIle_Detection.py** as per instructions in commit message
 
+Step 6: Run **generate_BB_to_sentence_Undreamt_corpora_from_GDLs.py** as per instructions in commit message
 
-Step 7: Use above undreamt corpora to generate Word2Vec embeddings.
+Step 7: Use the above undreamt corpora to generate Word2Vec embeddings.
 
 Step 8: Using Word2Vec embeddings generate cross-lingual embeddings through Vecmap
 
 Step 9: Train Undreamt using undreamt corpora and cross-lingual embeddings
 
-Step 10: Convert GDLs to one-basic-block-per-line format by running below command for the program **extract_instructions_from_GDLs_BB_wise.py**.
+Step 10: Run **extract_instructions_from_GDLs_BB_wise.py**.as per instructions in commit message
 
-    python3 extract_instructions_from_GDLs_BB_wise.py --input_path INPUT_FOLDER_WITH_PREPROCESSED_GDLS --output_path OUTPUT_FOLDER_FOR_CONVERTED_GDLs
 
 Step 11: Translate required preprocessed ARM GDLs in basic-block format to x86 using the trained undreamt model.
 
-Step 12: Convert GDLs to one-instruction-per-line format by running below command for the program **extract_instructions_from_GDLs_instr_wise.py**. Do this for both x86 and ARM GDLs.
+Step 12: Run **extract_instructions_from_GDLs_instr_wise.py**. as per instructions in commit message
 
-    python3 extract_instructions_from_GDLs_instr_wise.py --input_path INPUT_FOLDER_WITH_PREPROCESSED_GDLS --output_path OUTPUT_FOLDER_FOR_CONVERTED_GDLs
 
 Step 13: Create a set of common preprocessed GDLs for ARM and x86.
 
+Step 14: Run **get_function_embeddings_v6.py** as per instructions in commit message
 
-Step 15: Run **calculate_accuracy_of_function_similarity_detection_from_embeddings_v6.py** with below command to calculate accuracy of function similarity detection from embeddings
+Step 15: Run **calculate_accuracy_of_function_similarity_detection_from_embeddings_v6.py** as per instructions in commit message to perform the function similarity detection task
 
-    python3 calculate_accuracy_of_function_similarity_detection_from_embeddings_v6.py --input_path_x86_emb FILEPATH_FOR_X86_FUNCTION_EMBEDDINGS --input_path_ARM_emb FILEPATH_FOR_ARM_FUNCTION_EMBEDDINGS --optimization_level OPTIMIZATION_LEVEL_UNDER_CONSIDERATION
-
-
+Step 16: Run **GridSVM_with_SMOTE_v6.py** as per instructions in commit message to perform the vulnerability detection task
 
