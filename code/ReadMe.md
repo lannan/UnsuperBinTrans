@@ -35,3 +35,5 @@ Step 15: Run **calculate_accuracy_of_function_similarity_detection_from_embeddin
 
 Step 16: Run **GridSVM_with_SMOTE_v1.py** as per instructions in commit message to perform the vulnerability detection task
 
+Step 17: Run **BLEU_Calculation_v1.py** as per instructions in commit message to calculate BLEU scores for the translation.
+
