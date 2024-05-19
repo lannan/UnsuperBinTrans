@@ -15,6 +15,12 @@ The source code, datasets, and trained model will be released soon.
 Modify **./demo-word.sh** file in Word2Vec with appropriate input file of monolingual text corpus. Set parameters "size" to 200, "binary" to 0, and "output" to appropriate output file name with ".txt" as file extension.  
 &nbsp;
 
+[fasttext](https://github.com/facebookresearch/fastText)
+Install fastText following the guidelines from the above GitHub repository.
+Use below command to generate monolingual word embeddings for each of x86 and ARM instructions.
+
+    ./fasttext skipgram -input MONOLINGUAL_TEXT_CORPORA.txt -output /path/to/output/directory -minn 2 -maxn 5 -dim 200
+
 [VecMap](https://github.com/artetxem/vecmap)
 
 Use below command to generate cross-lingual embeddings from monolingual embeddings by VecMap:
