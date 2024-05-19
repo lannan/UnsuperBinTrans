@@ -13,9 +13,9 @@ Step 5: Run **Duplicate_FIle_Detection_v1.py** as per instructions in commit mes
 
 Step 6: Run **generate_BB_to_sentence_Undreamt_corpora_from_GDLs_v1.py** as per instructions in commit message
 
-Step 7: Use the above undreamt corpora to generate Word2Vec embeddings.
+Step 7: Use the above undreamt corpora to generate Word2Vec and fastText embeddings. We used word2vec and fastText to compare their performances in achieving our goals.
 
-Step 8: Using Word2Vec embeddings generate cross-lingual embeddings through Vecmap
+Step 8: Using Word2Vec and fastText embeddings generate cross-lingual embeddings through Vecmap separately.
 
 Step 9: Train Undreamt using undreamt corpora and cross-lingual embeddings
 
