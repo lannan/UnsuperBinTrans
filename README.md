@@ -16,10 +16,12 @@ Modify **./demo-word.sh** file in Word2Vec with appropriate input file of monoli
 &nbsp;
 
 [fasttext](https://github.com/facebookresearch/fastText)
+
 Install fastText following the guidelines from the above GitHub repository.
 Use below command to generate monolingual word embeddings for each of x86 and ARM instructions.
 
     ./fasttext skipgram -input MONOLINGUAL_TEXT_CORPORA.txt -output /path/to/output/directory -minn 2 -maxn 5 -dim 200
+&nbsp;
 
 [VecMap](https://github.com/artetxem/vecmap)
 
