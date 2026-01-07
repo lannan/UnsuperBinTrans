@@ -2,7 +2,7 @@
 
 This repository was created for the following paper.
 
-"Unsupervised Binary Code Translation with Application to Code Similarity Detection and Vulnerability Discovery"
+["Unsupervised Binary Code Translation with Application to Code Similarity Detection and Vulnerability Discovery"](https://aclanthology.org/2023.findings-emnlp.971.pdf)
 
 Iftakhar Ahmad (University of South Carolina), Lannan Luo (George Mason University).
 
