@@ -6,7 +6,7 @@ This repository was created for the following paper.
 
 Iftakhar Ahmad (University of South Carolina), Lannan Luo (George Mason University).
 
-The source code, datasets, and trained model will be released soon.
+The source code and datasets are available in this repository.
 
 # UnsuperBinTrans
 
